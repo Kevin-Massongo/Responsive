@@ -1,0 +1,71 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background-image: url('https://envato-shoebox-0.imgix.net/cf9c/db8c-2e8b-4e99-b27b-b6843e0bc788/IS09BA9AG.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=800&s=3be94c3e9cdfdeba0dc93e81b07f2702');
+    background-position: center;
+    background-size: cover;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.icon{
+    font-size: 1.5rem;
+    color: white;
+    display: none;
+    margin-top: -5px;
+}
+
+header{
+    padding: 25px 10px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    position: fixed;
+}
+
+.navbar li{
+    list-style: none;
+    margin-right: 30px;
+}
+
+.navbar{
+    display: flex;
+    position: relative;
+}
+
+.navbar li a:hover{
+    color: orange;
+}
+.btn{
+    background-color: orange;
+    padding: 5px 20px;
+    border-radius: 25px;
+    margin-top: -5px;
+    transition: all 0.5s ease-out; 
+}
+
+.btn:hover{
+    scale: 1.05;
+    font-weight: bold;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: -5px;
+    color: orange;
+}
+
+.logo:hover{
+    color: white;
+    transition: all 0.5s ease-out;
+}
