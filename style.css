@@ -1,15 +1,51 @@
 *{
-    font-family: 'Open Sans', sans-serif;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+}
+h1{
+    font-size: 3rem;
+    color: white;
 }
 
+p{
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    max-width: 80%;
+}
 body{
     height: 100vh;
-    background-image: url('https://envato-shoebox-0.imgix.net/cf9c/db8c-2e8b-4e99-b27b-b6843e0bc788/IS09BA9AG.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=800&s=3be94c3e9cdfdeba0dc93e81b07f2702');
+    background-image: url('https://envato-shoebox-0.imgix.net/a1e9/98f0-e0df-4d35-935e-f02c0a4ae38a/1258463.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=700&s=d827d309c532aec80879f2113f8c84f2');
     background-position: center;
     background-size: cover;
+}
+
+.navbar{
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.navbar .links li{
+    margin-right: 20px;
+    list-style: none;
+}
+
+.navbar .links{
+    position: relative;
+    display: flex;
 }
 
 a{
@@ -17,55 +53,112 @@ a{
     text-decoration: none;
 }
 
-.icon{
-    font-size: 1.5rem;
-    color: white;
-    display: none;
-    margin-top: -5px;
-}
-
-header{
-    padding: 25px 10px;
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    position: fixed;
-}
-
-.navbar li{
-    list-style: none;
-    margin-right: 30px;
-}
-
-.navbar{
-    display: flex;
-    position: relative;
-}
-
-.navbar li a:hover{
+a:hover{
     color: orange;
-}
-.btn{
-    background-color: orange;
-    padding: 5px 20px;
-    border-radius: 25px;
-    margin-top: -5px;
-    transition: all 0.5s ease-out; 
-}
-
-.btn:hover{
-    scale: 1.05;
-    font-weight: bold;
 }
 
 .logo{
     font-size: 1.5rem;
-    font-weight: bold;
-    margin-top: -5px;
     color: orange;
+    font-weight: bold;
 }
 
 .logo:hover{
     color: white;
     transition: all 0.5s ease-out;
+    scale: 0.9;
+}
+
+.navbar .btn{
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 25px;
+}
+
+.navbar .btn:hover{
+    scale: 1.06;
+    transition: all 0.5s ease-out;
+    font-weight: bold;
+    color: white;
+}
+
+.btn:active{
+    scale: 0.96;
+}
+
+.icon{
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+
+.menu{
+    position: absolute;
+    right: 2rem;
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(15px);
+    transition: all 0.3s ease-out;
+    width: 200px;
+    border-radius: 10px;
+    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    list-style: none;
+    margin-top: 0.6rem;
+}
+
+.menu.open{
+    height: 240px;
+}
+
+.menu .btn{
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu .btn:hover{
+    scale: 1.06;
+    transition: all 0.5s ease-out;
+    font-weight: bold;
+    color: white;
+}
+
+.menu .btn:active{
+    scale: 0.96;
+}
+@media (max-width:992px) {
+    .navbar .links,
+    .navbar .btn{
+        display: none;
+    }
+    .icon{
+        display: block;
+    }
+    .menu{
+        display: block;
+    }
+}
+
+@media (max-width:992px){
+    .menu{
+        left: 2rem;
+        width: unset;
+    }
 }

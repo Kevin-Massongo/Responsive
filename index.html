@@ -12,17 +12,46 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Design Web Creatif</a>
-        <ul class="navbar">
+        <div class="navbar">
+            <a href="#" class="logo">Design Web Creatif</a>
+            <ul class="links">
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="service">Services</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+            <a href="#" class="btn">Get Started</a>
+            <div class="icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="menu">
             <li><a href="home">Home</a></li>
             <li><a href="about">About</a></li>
             <li><a href="service">Services</a></li>
             <li><a href="contact">Contact</a></li>
-        </ul>
-        <a href="#" class="btn">Get Started</a>
-        <div class="icon">
-            <i class="fa-solid fa-bars"></i>
+            <a href="#" class="btn">Get Started</a>
         </div>
     </header>
+    <section>
+        <h1>Bienvenue</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat doloremque quod aperiam soluta aspernatur, quos temporibus eaque! Necessitatibus quod quae accusamus tenetur rerum sint itaque! Magni voluptate ipsum deserunt quis.
+        </p>
+    </section>
+    <script>
+        const icon = document.querySelector('.icon')
+        const iconIcon = document.querySelector('.icon i')
+        const menu = document.querySelector('.menu')
+
+        icon.onclick= function () {
+            menu.classList.toggle('open')
+            const isOpen = menu.classList.contains('open')
+
+            iconIcon.classList = isOpen
+            ? "fa-solid fa-xmark"
+            : "fa-solid fa-bars"
+        }
+    </script>
 </body>
 </html>
